@@ -7,7 +7,7 @@ The dashboard provides a clearer, more accessible representation of short-term c
 
 ## Features
 
-* **Live USGS streamflow data** updated automatically through a processing pipeline
+* **Live USGS streamflow data** updated automatically through a processing pipeline. More information found in [Pipeline Documentation](documentation.md)
 * **Interactive Virginia map** showing flow status and 3-hour rate of change
 * **Color-coded risk indicators**
   * Brown: stable/decreasing (≤ 0%)
@@ -25,9 +25,6 @@ Below are the key files you will interact with in this repository.
 ##### `main.py`:
 Main dashboard application.
 Loads and updates data, handles routing, map rendering, hover formatting, gauge detail page logic, and UI layout.
-
-##### `compare_p90_roc.py`:
-Produces a single csv that combines current flow data, rate of change (1h, 3h, 6h), and comparison to 90th percentile historical values.
 
 ##### `fetch_data.py`:
 Handles incremental downloading of USGS discharge readings and maintains a rolling 24-hour window.
