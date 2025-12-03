@@ -36,9 +36,6 @@ Fetches historical data from the USGS website for comparison.
 ##### `process_gauge_data.py`:
 Uses current and historical data to create calculations that will appear on the dashboard.
 
-##### `update_date.py`:
-Ensures historical reference data is present, fetches the latest gauge data, processes it to compute rate of change against historical P90 values, and logs each update with a timestamp for tracking.
-
 ##### `update_pipeline.py`:
 This script runs the data fetching, historical data verification, and processing steps in sequence to ensure the gauge data is up-to-date and properly analyzed.
 
