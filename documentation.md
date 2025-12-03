@@ -4,11 +4,9 @@
 Upon opening or refreshing the dashboard, the `update_pipeline.py` script is automatically executed. This pipeline performs these steps:
 
 ### **1. Fetch Current Gauge Data**
-The `fetch_data.py`  retrieves ~24 hours of readings for all selected USGS gauges and saves them to:
+The `fetch_data.py`  retrieves ~24 hours of readings for all selected USGS gauges and saves them to
 
-`data/gauge_data.csv`
-
-This file contains raw flow values and timestamps.
+`data/gauge_data.csv` which contains raw flow values and timestamps.
 
 ---
 
@@ -38,9 +36,7 @@ For each site:
 
 If a suitable earlier reading is found, ROC is calculated as:
 
-$$
-\text{pct\_change\_3h} = \frac{\text{latest\_flow} - \text{flow\_3h\_ago}}{\text{flow\_3h\_ago}} \times 100
-$$
+pct_change_3h = (latest_flow - flow_3h_ago) / flow_3h_ago × 100
 
 If no earlier value exists, or the earlier flow is zero, the ROC is recorded as **missing**.
 
